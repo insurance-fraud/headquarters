@@ -14,7 +14,7 @@ run:
 	cd acquire-it && docker-compose up &
 	cd acquire-it-api && docker-compose up &
 	cd pcc && docker-compose up &
-	cd issue-it && docker-compose up
+	cd issue-it && docker-compose up &
 
 test:
 	yarn cypress:run
