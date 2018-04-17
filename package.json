@@ -1,0 +1,17 @@
+{
+  "name": "headquarters",
+  "version": "1.0.0",
+  "description": "HQ of insurance-fraud",
+  "main": "index.js",
+  "repository": "git@github.com:insurance-fraud/headquarters.git",
+  "author": "nikolalsvk <nikolaseap@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  }
+}
