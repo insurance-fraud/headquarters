@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/insurance-fraud/headquarters/branches/master/shields_badge.svg)](https://semaphoreci.com/insurance-fraud/headquarters)
+
 # headquarters
 
 HQ of the insurance-fraud
