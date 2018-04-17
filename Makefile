@@ -9,4 +9,8 @@ setup:
 
 run:
 	cd merch-it && docker-compose up &
-	cd merch-it-api && docker-compose up
+	cd merch-it-api && docker-compose up &
+	cd acquire-it && docker-compose up &
+	cd acquire-it-api && docker-compose up &
+	cd pcc && docker-compose up &
+	cd issue-it && docker-compose up
