@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716"
   },
   "devDependencies": {
     "cypress": "^2.1.0"
