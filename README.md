@@ -42,3 +42,9 @@ Ruby on Rails API responsible for issuing payments, a bank.
 
 Port: 5001
 Ruby on Rails API which represents Payment Card Center.
+
+## Tech stack
+
+- Docker
+- Ruby on Rails API
+- create-react-app front end
