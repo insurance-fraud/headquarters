@@ -1,0 +1,13 @@
+sudo: required
+services:
+  - docker
+language: node_js
+node_js:
+  - "9.2.0"
+cache: yarn
+install:
+  - make setup
+script:
+  - make run
+notifications:
+  email: false
