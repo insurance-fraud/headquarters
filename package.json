@@ -12,6 +12,9 @@
     "cypress:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716"
   },
   "devDependencies": {
-    "cypress": "^2.1.0"
+    "cypress": "^3.1.4"
+  },
+  "dependencies": {
+    "bpmn": "^0.2.2"
   }
 }
