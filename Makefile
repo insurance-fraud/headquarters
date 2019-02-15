@@ -16,5 +16,11 @@ run:
 	cd pcc && docker-compose up &
 	cd issue-it && docker-compose up &
 
+setup_db:
+	docker-compose exec acquire-it-api.web bin/rails db:setup
+	docker-compose exec merch-it-api.web bin/rails db:setup
+	docker-compose exec pcc.web bin/rails db:setup
+	docker-compose exec issue-it.web bin/rails db:setup
+
 test:
 	yarn cypress:run
