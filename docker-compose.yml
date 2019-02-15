@@ -1,0 +1,98 @@
+version: '2.2'
+services:
+  merch-it:
+    build: ./merch-it
+    environment:
+      - REACT_APP_MERCH_IT_API_URL=http://merch-it-api.web:3001
+      - REACT_APP_MERCHANT_ID=1
+      - REACT_APP_MERCHANT_PASSWORD=strongpassword
+    command: yarn start
+    ports:
+      - "3000:3000"
+
+  merch-it-api.db:
+    image: postgres
+    ports:
+      - "5435:5432"
+  merch-it-api.web:
+    build: ./merch-it-api
+    environment:
+      - DB_USERNAME=postgres
+      - DB_HOST=db
+      - ACQUIRE_IT_API_URL=http://acquire-it-api.web:4001
+    command: bundle exec rails s -p 3001 -b '0.0.0.0'
+    volumes:
+      - .:/merch-it
+    ports:
+      - "3001:3001"
+    links:
+      - merch-it-api.db:db
+      - acquire-it-api.web:acquire-it-api
+    depends_on:
+      - merch-it-api.db
+      - acquire-it-api.web
+
+  acquire-it:
+    build: ./acquire-it
+    environment:
+      - REACT_APP_ACQUIRE_IT_API_URL=http://acquire-it-api.web:4001
+    command: yarn start
+    ports:
+      - "4000:4000"
+
+  acquire-it-api.db:
+    image: postgres
+  acquire-it-api.web:
+    build: ./acquire-it-api
+    environment:
+      - DB_USERNAME=postgres
+      - DB_HOST=db
+      - PCC_URL=http://pcc.web:5000
+    command: bundle exec rails s -p 4001 -b '0.0.0.0'
+    volumes:
+      - .:/acquire-it
+    ports:
+      - "4001:4001"
+    links:
+      - acquire-it-api.db:db
+      - pcc.web:pcc
+    depends_on:
+      - acquire-it-api.db
+      - pcc.web
+
+  pcc.db:
+    image: postgres
+  pcc.web:
+    build: ./pcc
+    environment:
+      - DB_USERNAME=postgres
+      - DB_HOST=db
+      - ISSUE_IT_URL=http://issue-it.web:5001
+    command: bundle exec rails s -p 5000 -b '0.0.0.0'
+    volumes:
+      - .:/pcc
+    ports:
+      - "5000:5000"
+    links:
+      - pcc.db:db
+      - issue-it.web:issue-it
+    depends_on:
+      - pcc.db
+      - issue-it.web
+
+  issue-it.db:
+    image: postgres
+  issue-it.web:
+    build: ./issue-it
+    environment:
+      - DB_USERNAME=postgres
+      - DB_HOST=db
+    command: bundle exec rails s -p 5001 -b '0.0.0.0'
+    volumes:
+      - .:/issue-it
+    ports:
+      - "5001:5001"
+    links:
+      - issue-it.db:db
+    depends_on:
+      - issue-it.db
