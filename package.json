@@ -15,6 +15,6 @@
     "cypress": "^3.1.4"
   },
   "dependencies": {
-    "bpmn": "^0.2.2"
+    "camunda-external-task-client-js": "^1.1.1"
   }
 }
