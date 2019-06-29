@@ -1,4 +1,4 @@
-describe('Visiting', function() {
+describe('merch-it', function() {
   it('Visits merch-it', function() {
     cy.visit('http://localhost:3000')
 

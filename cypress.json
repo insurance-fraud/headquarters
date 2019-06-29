@@ -1,3 +1,4 @@
 {
-  "projectId": "untwtk"
+  "projectId": "untwtk",
+  "baseUrl": "http://localhost:3000"
 }

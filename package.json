@@ -8,11 +8,11 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716"
   },
   "devDependencies": {
-    "cypress": "^3.1.4"
+    "cypress": "^3.3.2"
   },
   "dependencies": {
     "camunda-external-task-client-js": "^1.1.1"
