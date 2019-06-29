@@ -9,12 +9,7 @@ setup:
 	yarn install
 
 run:
-	cd merch-it && docker-compose up &
-	cd merch-it-api && docker-compose up &
-	cd acquire-it && docker-compose up &
-	cd acquire-it-api && docker-compose up &
-	cd pcc && docker-compose up &
-	cd issue-it && docker-compose up &
+	docker-compose up
 
 setup_db:
 	docker-compose exec acquire-it-api.web bin/rails db:setup
@@ -23,4 +18,4 @@ setup_db:
 	docker-compose exec issue-it.web bin/rails db:setup
 
 test:
-	yarn cypress:run
+	yarn cy:run
