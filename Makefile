@@ -8,6 +8,9 @@ setup:
 	git clone git@github.com:insurance-fraud/issue-it.git && cd issue-it && docker-compose build
 	yarn install
 
+run_ci:
+	docker-compose up -d
+
 run:
 	docker-compose up
 
@@ -18,4 +21,5 @@ setup_db:
 	docker-compose exec issue-it.web bin/rails db:setup
 
 test:
-	yarn cy:run
+	npm install -g wait-on
+	wait-on http://localhost:3000 http://localhost:3001 http://localhost:4000 http://localhost:4001 http://localhost:5000 http://localhost:5001 && yarn cy:run

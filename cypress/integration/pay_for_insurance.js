@@ -1,5 +1,5 @@
-describe('Paying for insurance', function() {
-  it('Cheapest insurance', function() {
+describe('Paying for plans', function() {
+  it('cheapest one', function() {
     cy.visit('http://localhost:3000')
 
     cy.contains('Welcome to merch-it')
