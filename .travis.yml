@@ -8,6 +8,8 @@ cache: yarn
 install:
   - make setup
 script:
-  - make run
+  - make run_ci
+  - make setup_db
+  - make test
 notifications:
   email: false
