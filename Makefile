@@ -23,3 +23,4 @@ setup_db:
 test:
 	npm install -g wait-on
 	wait-on http://localhost:3000 http://localhost:3001 http://localhost:4000 http://localhost:4001 http://localhost:5000 http://localhost:5001 && yarn cy:run
+	yarn test:jest puppeteer/pay_insurance.test.js
