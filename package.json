@@ -9,12 +9,14 @@
   "private": false,
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716"
+    "cy:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716",
+    "test:jest": "jest"
   },
   "devDependencies": {
-    "cypress": "^3.3.2"
+    "cypress": "^3.3.2",
+    "jest": "^24.8.0",
+    "jest-puppeteer": "^4.2.0",
+    "puppeteer": "^1.18.1"
   },
-  "dependencies": {
-    "camunda-external-task-client-js": "^1.1.1"
-  }
+  "dependencies": {}
 }
