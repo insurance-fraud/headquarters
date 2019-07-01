@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 jest.setTimeout(10000)
 
 test("Pay for first option", async () => {
-  const browser = await puppeteer.launch({ headless: false, devtools: true });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto("http://localhost:3000");
 
@@ -27,7 +27,7 @@ test("Pay for first option", async () => {
 });
 
 test("Balance is too low", async () => {
-  const browser = await puppeteer.launch({ headless: false, devtools: true });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto("http://localhost:3000");
 
