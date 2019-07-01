@@ -1,4 +1,5 @@
 [![Build Status](https://semaphoreci.com/api/v1/insurance-fraud/headquarters/branches/master/shields_badge.svg)](https://semaphoreci.com/insurance-fraud/headquarters)
+[![Build Status](https://travis-ci.com/insurance-fraud/headquarters.svg?branch=master)](https://travis-ci.com/insurance-fraud/headquarters)
 
 # headquarters
 
