@@ -16,6 +16,7 @@
     "cypress": "^3.3.2",
     "jest": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
+    "nightwatch": "^1.1.13",
     "puppeteer": "^1.18.1"
   },
   "dependencies": {},
