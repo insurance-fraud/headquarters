@@ -36,3 +36,4 @@ test:
 		http://localhost:5001 && yarn cy:run
 	yarn test:jest puppeteer/pay_insurance.test.js
 	yarn test:nightwatch nightwatch/
+	yarn test:cafe chrome testcafe/
