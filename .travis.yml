@@ -13,3 +13,5 @@ script:
   - make test
 notifications:
   email: false
+addons:
+  chrome: stable
