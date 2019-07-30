@@ -10,3 +10,6 @@ cypress/videos
 cypress/screenshots
 
 .DS_Store
+
+chromedriver.log
+tests_output
