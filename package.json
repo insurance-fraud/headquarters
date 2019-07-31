@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716",
+    "cy:run": "cypress run --record",
     "test:jest": "jest",
     "test:nightwatch": "nightwatch",
     "test:cafe": "testcafe",
