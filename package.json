@@ -12,10 +12,12 @@
     "cy:run": "cypress run --record --key 994450da-9623-4a36-8728-20e0b3f2a716",
     "test:jest": "jest",
     "test:nightwatch": "nightwatch",
-    "test:cafe": "testcafe"
+    "test:cafe": "testcafe",
+    "test:codeceptjs": "codeceptjs"
   },
   "devDependencies": {
     "chromedriver": "^76.0.0",
+    "codeceptjs": "^2.2.1",
     "cypress": "^3.3.2",
     "jest": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
