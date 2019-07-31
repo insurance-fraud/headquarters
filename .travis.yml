@@ -2,9 +2,10 @@ sudo: required
 services:
   - docker
 addons:
+  chrome: stable
   apt:
     packages:
-      - google-chrome-stable
+      - chromium-chromedriver
 language: node_js
 node_js:
   - "8.12.0"
