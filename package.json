@@ -15,7 +15,7 @@
     "test:cafe": "testcafe"
   },
   "devDependencies": {
-    "chromedriver": "^2.41.0",
+    "chromedriver": "^76.0.0",
     "cypress": "^3.3.2",
     "jest": "^24.8.0",
     "jest-puppeteer": "^4.2.0",
