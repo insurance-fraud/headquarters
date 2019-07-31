@@ -37,3 +37,4 @@ test:
 	yarn test:jest puppeteer/
 	yarn test:nightwatch nightwatch/
 	yarn test:cafe chrome testcafe/
+	yarn test:codeceptjs run
