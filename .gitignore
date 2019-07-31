@@ -13,3 +13,5 @@ cypress/screenshots
 
 chromedriver.log
 tests_output
+
+output
