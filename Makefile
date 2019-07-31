@@ -34,6 +34,6 @@ test:
 		http://localhost:4001 \
 		http://localhost:5000 \
 		http://localhost:5001 && yarn cy:run
-	yarn test:jest puppeteer/pay_insurance.test.js
+	yarn test:jest puppeteer/
 	yarn test:nightwatch nightwatch/
 	yarn test:cafe chrome testcafe/
