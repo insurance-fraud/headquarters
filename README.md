@@ -14,6 +14,21 @@ It's responsible for running 6 services:
 5. issue-it
 6. pcc
 
+## Installing
+
+To install all dependencies simply run:
+```
+$ make setup
+```
+
+## Running all services
+
+```
+$ make run
+```
+
+Then you can visit http://localhost:3000 to buy travel insurance
+
 ### merch-it
 
 Port: 3000
