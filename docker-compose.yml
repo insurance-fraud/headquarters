@@ -50,7 +50,7 @@ services:
     build: ./acquire-it-api
     environment:
       - DB_USERNAME=postgres
-      - DB_HOST=db
+      - DB_HOST=acquire-it-api.db
       - PCC_URL=http://pcc.web:5000
     command: bundle exec rails s -p 4001 -b '0.0.0.0'
     volumes:
