@@ -1,6 +1,7 @@
 sudo: required
 services:
   - docker
+  - xvfb
 addons:
   chrome: stable
   apt:
@@ -15,10 +16,6 @@ cache:
     - ~/.cache
 install:
   - make setup
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
 script:
   - make run_ci
   - make setup_db
