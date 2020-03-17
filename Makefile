@@ -22,13 +22,13 @@ setup_db:
 
 run_ci:
 	docker-compose up -d
+	sleep 5
 
 run:
 	docker-compose up
 
 test:
-	npm install -g wait-on
-	wait-on http://localhost:3000 \
+	npx wait-on http://localhost:3000 \
 		http://localhost:3001 \
 		http://localhost:4000 \
 		http://localhost:4001 \
