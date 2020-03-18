@@ -1,5 +1,12 @@
 version: '2.2'
 services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - "5435:5432"
+
   merch-it:
     build: ./merch-it
     environment:
@@ -12,10 +19,6 @@ services:
     ports:
       - "3000:3000"
 
-  merch-it-api.db:
-    image: postgres
-    ports:
-      - "5435:5432"
   merch-it-api.web:
     build: ./merch-it-api
     environment:
@@ -28,10 +31,10 @@ services:
     ports:
       - "3001:3001"
     links:
-      - merch-it-api.db:db
+      - db:db
       - acquire-it-api.web:acquire-it-api
     depends_on:
-      - merch-it-api.db
+      - db
       - acquire-it-api.web
 
   acquire-it:
@@ -44,8 +47,6 @@ services:
     ports:
       - "4000:4000"
 
-  acquire-it-api.db:
-    image: postgres
   acquire-it-api.web:
     build: ./acquire-it-api
     environment:
@@ -58,14 +59,12 @@ services:
     ports:
       - "4001:4001"
     links:
-      - acquire-it-api.db:db
+      - db:db
       - pcc.web:pcc
     depends_on:
-      - acquire-it-api.db
+      - db
       - pcc.web
 
-  pcc.db:
-    image: postgres
   pcc.web:
     build: ./pcc
     environment:
@@ -78,14 +77,12 @@ services:
     ports:
       - "5000:5000"
     links:
-      - pcc.db:db
+      - db:db
       - issue-it.web:issue-it
     depends_on:
-      - pcc.db
+      - db
       - issue-it.web
 
-  issue-it.db:
-    image: postgres
   issue-it.web:
     build: ./issue-it
     environment:
@@ -97,6 +94,6 @@ services:
     ports:
       - "5001:5001"
     links:
-      - issue-it.db:db
+      - db:db
     depends_on:
-      - issue-it.db
+      - db

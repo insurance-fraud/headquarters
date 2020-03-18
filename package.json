@@ -16,7 +16,6 @@
     "test:codeceptjs": "codeceptjs"
   },
   "devDependencies": {
-    "chromedriver": "^76.0.0",
     "codeceptjs": "^2.2.1",
     "cypress": "^3.4.1",
     "jest": "^24.8.0",

@@ -4,7 +4,11 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://localhost:3000',
-      show: true
+      show: true,
+      waitForAction: 500,
+      waitForTimeout: 5000,
+      waitForNavigation: ['networkidle0', 'domcontentloaded'],
+      fullPageScreenshots: true
     }
   },
   include: {},
